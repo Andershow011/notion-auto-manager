@@ -9,14 +9,18 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
 
+    permissions:
+    contents: read
+
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
 
-      - name: Instalar Node.js
-        uses: actions/setup-node@v4
-        with:
+      - - name: Instalar Node.js LTS
+          uses: actions/setup-node@v4
+          with:
           node-version: 20
+          cache: npm
 
       - name: Instalar dependências
         run: npm install
