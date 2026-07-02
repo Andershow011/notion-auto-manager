@@ -1,0 +1,14 @@
+{
+  "name": "notion-auto-manager",
+  "version": "1.0.0",
+  "description": "Automação do Notion utilizando GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "preencher": "node src/preencherDataValidacao.js",
+    "concluir": "node src/concluirAtividades.js"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.22.0",
+    "dotenv": "^17.2.0"
+  }
+}
