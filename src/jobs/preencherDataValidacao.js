@@ -1,5 +1,5 @@
-const notion = require("./notionClient");
-const config = require("./config");
+const notion = require("../notionClient");
+const config = require("../config");
 
 async function preencherDatas() {
 

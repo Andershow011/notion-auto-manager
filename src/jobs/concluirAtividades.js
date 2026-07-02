@@ -1,5 +1,5 @@
-const notion = require("./notionClient");
-const config = require("./config");
+const notion = require("../notionClient");
+const config = require("../config");
 
 // Quantidade de dias para concluir automaticamente
 const DIAS_PARA_CONCLUIR = 15;

@@ -1,0 +1,28 @@
+name: Concluir atividades (Notion)
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # todos os dias às 08:00 (UTC)
+  workflow_dispatch: # permite rodar manualmente no GitHub
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar automação de conclusão
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATASOURCE_ID: ${{ secrets.NOTION_DATASOURCE_ID }}
+        run: npm run concluir
