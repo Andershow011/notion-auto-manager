@@ -4,8 +4,8 @@
   "description": "Automação do Notion utilizando GitHub Actions",
   "main": "index.js",
   "scripts": {
-    "preencher": "node src/preencherDataValidacao.js",
-    "concluir": "node src/concluirAtividades.js"
+    "preencher": "node src/jobs/preencherDataValidacao.js",
+    "concluir": "node src/jobs/concluirAtividades.js"
   },
   "dependencies": {
     "@notionhq/client": "^5.22.0",
