@@ -2,8 +2,8 @@ name: Preencher Data de Validação (Notion)
 
 on:
   schedule:
-    - cron: "0 17 * * *"
-  workflow_dispatch:
+  # 20:00 UTC = 17:00 Brasil
+  - cron: "0 20 * * *"
 
 jobs:
   run-script:

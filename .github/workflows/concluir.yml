@@ -2,8 +2,8 @@ name: Concluir atividades (Notion)
 
 on:
   schedule:
-    - cron: "0 8 * * *"
-  workflow_dispatch:
+  # 11:00 UTC = 08:00 Brasil
+  - cron: "0 11 * * *"
 
 jobs:
   run-script:
